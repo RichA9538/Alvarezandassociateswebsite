@@ -31,23 +31,34 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Contact form submission
+// Contact form submission via Formspree
 const contactForm = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
 if (contactForm) {
-  contactForm.addEventListener('submit', function(e) {
+  contactForm.addEventListener('submit', async function(e) {
     e.preventDefault();
     const btn = contactForm.querySelector('button[type="submit"]');
     btn.textContent = 'Sending...';
     btn.disabled = true;
-    // Simulate submission (replace with actual endpoint when ready)
-    setTimeout(() => {
-      formSuccess.style.display = 'block';
-      contactForm.reset();
-      btn.textContent = 'Send Message';
-      btn.disabled = false;
-      formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }, 1200);
+    const data = new FormData(contactForm);
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        formSuccess.style.display = 'block';
+        contactForm.reset();
+        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      } else {
+        btn.textContent = 'Error — Try Again';
+      }
+    } catch (err) {
+      btn.textContent = 'Error — Try Again';
+    }
+    btn.textContent = 'Send Message';
+    btn.disabled = false;
   });
 }
 
