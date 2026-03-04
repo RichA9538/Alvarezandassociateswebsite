@@ -111,7 +111,29 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   justify-content: space-between;
 }
-.logo-img { height: 160px; width: auto; max-width: 360px; object-fit: contain; }
+/* Horizontal wordmark */
+.nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+.logo-crest { height: 64px; width: auto; object-fit: contain; flex-shrink: 0; }
+.logo-text { display: flex; flex-direction: column; justify-content: center; }
+.logo-name {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.logo-sub {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: var(--text-mid);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 0.2rem;
+  white-space: nowrap;
+}
 .nav-links {
   display: flex;
   align-items: center;
