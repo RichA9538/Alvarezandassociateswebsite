@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Black Ops Style | Veteran & First Responder Apparel | Alvarez & Associates</title>
+  <meta name="description" content="Black Ops Style — premium veteran and first responder apparel. Patriotic t-shirts honoring military, police, firefighters, and corrections officers. Bulk orders for nonprofits and events." />
+  <meta name="keywords" content="veteran apparel, first responder shirts, patriotic t-shirts, back the blue, thin blue line, St Michael, military humor, nonprofit bulk apparel, Florida" />
+  <link rel="canonical" href="https://alvarezassociatesfl.com/apparel.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=12" />
+  <style>
+    /* ===========================
+       BLACK OPS STYLE — PAGE STYLES
+       =========================== */
+
+    /* Tactical dark overlay for hero */
+    .bos-hero {
+      background: linear-gradient(135deg, #0a0f1a 0%, #0F1B2D 50%, #1a0a0a 100%);
+      padding: 120px 0 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 2px solid rgba(201,168,76,0.3);
+    }
+    .bos-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A84C' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.4;
+    }
+    .bos-hero-badge {
+      display: inline-block;
+      background: rgba(201,168,76,0.15);
+      border: 1px solid rgba(201,168,76,0.4);
+      color: #C9A84C;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.4rem 1.2rem;
+      border-radius: 2px;
+      margin-bottom: 1.5rem;
+    }
+    .bos-hero h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+    .bos-hero h1 span { color: #C9A84C; }
+    .bos-hero p {
+      font-size: 1.1rem;
+      color: #8A9BB0;
+      max-width: 600px;
+      margin: 1rem auto 2rem;
+    }
+    .bos-hero-ctas {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Category filter tabs */
+    .bos-filters {
+      background: #1A2B42;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid rgba(201,168,76,0.15);
+      position: sticky;
+      top: 70px;
+      z-index: 100;
+    }
+    .bos-filters-inner {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0 1rem;
+    }
+    .filter-btn {
+      background: transparent;
+      border: 1px solid rgba(201,168,76,0.3);
+      color: #8A9BB0;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.5rem 1.2rem;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: rgba(201,168,76,0.15);
+      border-color: #C9A84C;
+      color: #C9A84C;
+    }
+
+    /* Product grid */
+    .bos-shop {
+      padding: 5rem 0;
+      background: #0F1B2D;
+    }
+    .bos-section-label {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .bos-section-label h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #fff;
+    }
+    .bos-section-label h2 span { color: #C9A84C; }
+    .bos-section-label p { color: #8A9BB0; margin-top: 0.75rem; }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .product-card {
+      background: #1A2B42;
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+      cursor: pointer;
+    }
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+      border-color: rgba(201,168,76,0.4);
+    }
+    .product-img-wrap {
+      position: relative;
+      background: #fff;
+      aspect-ratio: 1/1;
+      overflow: hidden;
+    }
+    .product-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+    .product-card:hover .product-img-wrap img {
+      transform: scale(1.04);
+    }
+    .product-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: #C9A84C;
+      color: #0F1B2D;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      border-radius: 2px;
+    }
+    .product-info {
+      padding: 1.25rem;
+    }
+    .product-category {
+      font-size: 0.7rem;
+      font-family: 'Oswald', sans-serif;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #C9A84C;
+      margin-bottom: 0.4rem;
+    }
+    .product-name {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+    .product-desc {
+      font-size: 0.82rem;
+      color: #8A9BB0;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+    .product-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+    .product-price {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #C9A84C;
+    }
+    .product-price span {
+      font-size: 0.75rem;
+      color: #8A9BB0;
+      font-weight: 400;
+      display: block;
+      font-family: 'Inter', sans-serif;
+    }
+    .btn-add {
+      background: linear-gradient(135deg, #C9A84C, #E8C97A);
+      color: #0F1B2D;
+      border: none;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.6rem 1.2rem;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .btn-add:hover {
+      background: linear-gradient(135deg, #E8C97A, #C9A84C);
+      transform: translateY(-1px);
+    }
+
+    /* Size selector modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.8);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: #1A2B42;
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 4px;
+      padding: 2rem;
+      max-width: 480px;
+      width: 100%;
+      position: relative;
+    }
+    .modal-close {
+      position: absolute;
+      top: 1rem; right: 1rem;
+      background: none; border: none;
+      color: #8A9BB0; font-size: 1.5rem;
+      cursor: pointer; line-height: 1;
+    }
+    .modal-close:hover { color: #fff; }
+    .modal h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 0.25rem;
+    }
+    .modal-price { color: #C9A84C; font-family: 'Oswald', sans-serif; font-size: 1.1rem; margin-bottom: 1.5rem; }
+    .modal label {
+      display: block;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #8A9BB0;
+      margin-bottom: 0.5rem;
+      font-family: 'Oswald', sans-serif;
+    }
+    .size-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .size-btn {
+      background: #0F1B2D;
+      border: 1px solid rgba(201,168,76,0.3);
+      color: #C5CDD8;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.8rem;
+      padding: 0.5rem;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: center;
+    }
+    .size-btn:hover, .size-btn.selected {
+      background: rgba(201,168,76,0.2);
+      border-color: #C9A84C;
+      color: #C9A84C;
+    }
+    .qty-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .qty-btn {
+      background: #0F1B2D;
+      border: 1px solid rgba(201,168,76,0.3);
+      color: #fff;
+      width: 36px; height: 36px;
+      border-radius: 2px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .qty-display {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.1rem;
+      color: #fff;
+      min-width: 2rem;
+      text-align: center;
+    }
+    .btn-confirm {
+      width: 100%;
+      background: linear-gradient(135deg, #C9A84C, #E8C97A);
+      color: #0F1B2D;
+      border: none;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.9rem;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-confirm:hover { opacity: 0.9; transform: translateY(-1px); }
+
+    /* Cart drawer */
+    .cart-fab {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: linear-gradient(135deg, #C9A84C, #E8C97A);
+      color: #0F1B2D;
+      border: none;
+      border-radius: 50%;
+      width: 60px; height: 60px;
+      font-size: 1.4rem;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(201,168,76,0.5);
+      z-index: 500;
+      display: flex; align-items: center; justify-content: center;
+      transition: transform 0.2s;
+    }
+    .cart-fab:hover { transform: scale(1.1); }
+    .cart-count {
+      position: absolute;
+      top: -4px; right: -4px;
+      background: #e74c3c;
+      color: #fff;
+      border-radius: 50%;
+      width: 22px; height: 22px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      display: none;
+    }
+    .cart-drawer {
+      position: fixed;
+      top: 0; right: -420px;
+      width: 400px;
+      height: 100vh;
+      background: #1A2B42;
+      border-left: 1px solid rgba(201,168,76,0.3);
+      z-index: 600;
+      transition: right 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .cart-drawer.open { right: 0; }
+    .cart-header {
+      padding: 1.5rem;
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .cart-header h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      color: #fff;
+    }
+    .cart-close {
+      background: none; border: none;
+      color: #8A9BB0; font-size: 1.5rem;
+      cursor: pointer;
+    }
+    .cart-close:hover { color: #fff; }
+    .cart-items { flex: 1; overflow-y: auto; padding: 1rem 1.5rem; }
+    .cart-empty { text-align: center; color: #8A9BB0; padding: 3rem 0; }
+    .cart-item {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(201,168,76,0.1);
+    }
+    .cart-item img { width: 70px; height: 70px; object-fit: cover; border-radius: 2px; background: #fff; }
+    .cart-item-info { flex: 1; }
+    .cart-item-name { font-family: 'Oswald', sans-serif; font-size: 0.9rem; text-transform: uppercase; color: #fff; }
+    .cart-item-meta { font-size: 0.78rem; color: #8A9BB0; margin: 0.2rem 0; }
+    .cart-item-price { font-family: 'Oswald', sans-serif; color: #C9A84C; font-size: 0.95rem; }
+    .cart-item-remove { background: none; border: none; color: #8A9BB0; cursor: pointer; font-size: 1rem; align-self: flex-start; }
+    .cart-item-remove:hover { color: #e74c3c; }
+    .cart-footer {
+      padding: 1.5rem;
+      border-top: 1px solid rgba(201,168,76,0.2);
+    }
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .cart-total span:first-child { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.1em; color: #8A9BB0; }
+    .cart-total-price { font-family: 'Oswald', sans-serif; font-size: 1.4rem; color: #C9A84C; font-weight: 700; }
+    .btn-checkout {
+      width: 100%;
+      background: linear-gradient(135deg, #C9A84C, #E8C97A);
+      color: #0F1B2D;
+      border: none;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 1rem;
+      border-radius: 2px;
+      cursor: pointer;
+      margin-bottom: 0.75rem;
+      transition: opacity 0.2s;
+    }
+    .btn-checkout:hover { opacity: 0.9; }
+    .cart-note { font-size: 0.75rem; color: #8A9BB0; text-align: center; }
+
+    /* Checkout form */
+    .checkout-section {
+      display: none;
+      padding: 5rem 0;
+      background: #0a1220;
+    }
+    .checkout-section.visible { display: block; }
+    .checkout-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #1A2B42;
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 4px;
+      padding: 2.5rem;
+    }
+    .checkout-form h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #8A9BB0;
+      margin-bottom: 0.4rem;
+      font-family: 'Oswald', sans-serif;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%;
+      background: #0F1B2D;
+      border: 1px solid rgba(201,168,76,0.25);
+      color: #fff;
+      padding: 0.75rem 1rem;
+      border-radius: 2px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: #C9A84C;
+    }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+    .checkout-order-summary {
+      background: #0F1B2D;
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 2px;
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .checkout-order-summary h4 {
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #C9A84C;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+    .summary-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: #C5CDD8;
+      padding: 0.3rem 0;
+    }
+    .summary-total {
+      border-top: 1px solid rgba(201,168,76,0.2);
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.1rem;
+      color: #C9A84C;
+    }
+    .payment-note {
+      background: rgba(201,168,76,0.08);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 2px;
+      padding: 1rem;
+      font-size: 0.82rem;
+      color: #C5CDD8;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    .payment-note strong { color: #C9A84C; }
+
+    /* Nonprofit bulk section */
+    .bos-nonprofit {
+      padding: 6rem 0;
+      background: linear-gradient(135deg, #0a0f1a 0%, #1A2B42 100%);
+      border-top: 1px solid rgba(201,168,76,0.2);
+    }
+    .nonprofit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .nonprofit-content h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .nonprofit-content h2 span { color: #C9A84C; }
+    .nonprofit-content p { color: #8A9BB0; margin-bottom: 1.5rem; line-height: 1.8; }
+    .nonprofit-features {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+    .nonprofit-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.6rem 0;
+      color: #C5CDD8;
+      font-size: 0.95rem;
+      border-bottom: 1px solid rgba(201,168,76,0.08);
+    }
+    .nonprofit-features li:last-child { border-bottom: none; }
+    .nonprofit-features li::before {
+      content: '✦';
+      color: #C9A84C;
+      font-size: 0.7rem;
+      margin-top: 0.35rem;
+      flex-shrink: 0;
+    }
+    .quote-form {
+      background: #1A2B42;
+      border: 1px solid rgba(201,168,76,0.25);
+      border-radius: 4px;
+      padding: 2rem;
+    }
+    .quote-form h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 1.5rem;
+    }
+    .quote-form .form-group input,
+    .quote-form .form-group select,
+    .quote-form .form-group textarea {
+      background: #0F1B2D;
+      border: 1px solid rgba(201,168,76,0.2);
+      color: #fff;
+      padding: 0.75rem 1rem;
+      width: 100%;
+      border-radius: 2px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+    }
+    .quote-form .form-group input:focus,
+    .quote-form .form-group select:focus,
+    .quote-form .form-group textarea:focus {
+      outline: none;
+      border-color: #C9A84C;
+    }
+    .quote-form .form-group label {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #8A9BB0;
+      margin-bottom: 0.4rem;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 6rem;
+      right: 2rem;
+      background: #1A2B42;
+      border: 1px solid #C9A84C;
+      color: #fff;
+      padding: 1rem 1.5rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      z-index: 700;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s;
+      max-width: 300px;
+    }
+    .toast.show { transform: translateY(0); opacity: 1; }
+    .toast strong { color: #C9A84C; display: block; margin-bottom: 0.2rem; }
+
+    /* Success screen */
+    .order-success {
+      display: none;
+      text-align: center;
+      padding: 5rem 0;
+    }
+    .order-success.visible { display: block; }
+    .success-icon { font-size: 4rem; margin-bottom: 1rem; }
+    .order-success h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2rem;
+      text-transform: uppercase;
+      color: #C9A84C;
+      margin-bottom: 1rem;
+    }
+    .order-success p { color: #8A9BB0; max-width: 500px; margin: 0 auto 2rem; }
+
+    @media (max-width: 768px) {
+      .nonprofit-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .cart-drawer { width: 100%; right: -100%; }
+      .product-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION (same as main site) -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="AlvarezandAssoc.GoldLogoTransparent.png" alt="Alvarez & Associates LLC" class="logo-crest" />
+        <div class="logo-text">
+          <span class="logo-name">Alvarez &amp; Associates LLC</span>
+          <span class="logo-sub">Workforce Development &nbsp;&bull;&nbsp; AI Integration &nbsp;&bull;&nbsp; Nonprofit Consulting</span>
+        </div>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="https://rydeworks.com" target="_blank" style="color:#00D4C8;font-weight:600;white-space:nowrap">Rydeworks ↗</a></li>
+        <li><a href="apparel.html" style="color:#C9A84C;font-weight:600;white-space:nowrap">🎽 Apparel</a></li>
+        <li><a href="https://cal.com/rich-alvarez-x7b4oz/free-discovery-call" target="_blank" class="nav-cta" style="white-space:nowrap">Book a Consultation</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="bos-hero">
+    <div class="container" style="position:relative;z-index:1">
+      <div class="bos-hero-badge">Veteran &amp; First Responder Apparel</div>
+      <h1>Black Ops <span>Style</span></h1>
+      <p>Bold apparel for those who served, those who protect, and those who believe. Every design tells a story of sacrifice, faith, and brotherhood.</p>
+      <div class="bos-hero-ctas">
+        <a href="#shop" class="btn btn-gold">Shop Now</a>
+        <a href="#nonprofit" class="btn btn-outline">Bulk Orders for Nonprofits</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORY FILTERS -->
+  <div class="bos-filters">
+    <div class="bos-filters-inner">
+      <button class="filter-btn active" data-filter="all">All Designs</button>
+      <button class="filter-btn" data-filter="faith">Faith-Based</button>
+      <button class="filter-btn" data-filter="law-enforcement">Law Enforcement</button>
+      <button class="filter-btn" data-filter="military">Military &amp; Veteran</button>
+      <button class="filter-btn" data-filter="fire">Fire &amp; EMS</button>
+      <button class="filter-btn" data-filter="humor">Humor</button>
+    </div>
+  </div>
+
+  <!-- SHOP -->
+  <section class="bos-shop" id="shop">
+    <div class="container">
+      <div class="bos-section-label">
+        <h2>The <span>Collection</span></h2>
+        <p>Premium unisex t-shirts. 100% cotton. Printed to order and shipped direct.</p>
+      </div>
+      <div class="product-grid" id="productGrid">
+
+        <!-- Product 1: St. Michael -->
+        <div class="product-card" data-category="faith">
+          <div class="product-img-wrap">
+            <img src="apparel-images/st-michael.png" alt="Patron Saint of Protectors Shirt" loading="lazy" />
+            <span class="product-badge">Best Seller</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Faith-Based</div>
+            <div class="product-name">Patron Saint of Protectors</div>
+            <div class="product-desc">Saint Michael the Archangel — protector of warriors, police, and all who stand in harm's way. Gold &amp; navy illustration.</div>
+            <div class="product-footer">
+              <div class="product-price">$29.99 <span>+ shipping</span></div>
+              <button class="btn-add" onclick="openModal('Patron Saint of Protectors', 29.99, 'apparel-images/st-michael.png')">Select Size</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2: Back the Blue -->
+        <div class="product-card" data-category="law-enforcement">
+          <div class="product-img-wrap">
+            <img src="apparel-images/back-the-blue.png" alt="Back the Blue Shirt" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <div class="product-category">Law Enforcement</div>
+            <div class="product-name">Back the Blue</div>
+            <div class="product-desc">Thin blue line flag with police badge. "Back the Blue — Until You Need One." Bold distressed design on black.</div>
+            <div class="product-footer">
+              <div class="product-price">$29.99 <span>+ shipping</span></div>
+              <button class="btn-add" onclick="openModal('Back the Blue', 29.99, 'apparel-images/back-the-blue.png')">Select Size</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3: PTSD -->
+        <div class="product-card" data-category="military">
+          <div class="product-img-wrap">
+            <img src="apparel-images/ptsd-strength.png" alt="PTSD Is Not a Weakness Shirt" loading="lazy" />
+            <span class="product-badge">Awareness</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Military &amp; Veteran</div>
+            <div class="product-name">PTSD Is Not a Weakness</div>
+            <div class="product-desc">"It means you survived." A powerful message of resilience for veterans and first responders carrying invisible wounds.</div>
+            <div class="product-footer">
+              <div class="product-price">$29.99 <span>+ shipping</span></div>
+              <button class="btn-add" onclick="openModal('PTSD Is Not a Weakness', 29.99, 'apparel-images/ptsd-strength.png')">Select Size</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4: Never Forgotten -->
+        <div class="product-card" data-category="military">
+          <div class="product-img-wrap">
+            <img src="apparel-images/never-forgotten.png" alt="Never Forgotten Veteran Shirt" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <div class="product-category">Military &amp; Veteran</div>
+            <div class="product-name">Never Forgotten</div>
+            <div class="product-desc">Soaring eagle over a distressed American flag. A tribute to every service member who gave everything. Classic patriotic design.</div>
+            <div class="product-footer">
+              <div class="product-price">$29.99 <span>+ shipping</span></div>
+              <button class="btn-add" onclick="openModal('Never Forgotten', 29.99, 'apparel-images/never-forgotten.png')">Select Size</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5: First In Last Out -->
+        <div class="product-card" data-category="fire">
+          <div class="product-img-wrap">
+            <img src="apparel-images/first-responder.png" alt="First In Last Out First Responder Shirt" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <div class="product-category">Fire &amp; EMS</div>
+            <div class="product-name">First In. Last Out.</div>
+            <div class="product-desc">Thin red and blue line split flag honoring both firefighters and law enforcement. "Honor the Brave" — for all who run toward danger.</div>
+            <div class="product-footer">
+              <div class="product-price">$29.99 <span>+ shipping</span></div>
+              <button class="btn-add" onclick="openModal('First In. Last Out.', 29.99, 'apparel-images/first-responder.png')">Select Size</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6: Faith Over Fear -->
+        <div class="product-card" data-category="faith">
+          <div class="product-img-wrap">
+            <img src="apparel-images/god-guns-glory.png" alt="Faith Over Fear Shirt" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <div class="product-category">Faith-Based</div>
+            <div class="product-name">Faith Over Fear</div>
+            <div class="product-desc">"God. Family. Country." Cross draped with the American flag. A bold declaration of what matters most — distressed vintage style.</div>
+            <div class="product-footer">
+              <div class="product-price">$29.99 <span>+ shipping</span></div>
+              <button class="btn-add" onclick="openModal('Faith Over Fear', 29.99, 'apparel-images/god-guns-glory.png')">Select Size</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 7: Survived the Military -->
+        <div class="product-card" data-category="humor">
+          <div class="product-img-wrap">
+            <img src="apparel-images/veteran-humor.png" alt="I Survived the Military Funny Shirt" loading="lazy" />
+            <span class="product-badge">Fan Favorite</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Humor</div>
+            <div class="product-name">I Survived the Military</div>
+            <div class="product-desc">"Now I Survive Civilians." The grumpy veteran in a rocking chair with coffee. Because some battles never end. Perfect gift.</div>
+            <div class="product-footer">
+              <div class="product-price">$29.99 <span>+ shipping</span></div>
+              <button class="btn-add" onclick="openModal('I Survived the Military', 29.99, 'apparel-images/veteran-humor.png')">Select Size</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 8: Running In -->
+        <div class="product-card" data-category="fire">
+          <div class="product-img-wrap">
+            <img src="apparel-images/thin-red-line.png" alt="Running In Firefighter Shirt" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <div class="product-category">Fire &amp; EMS</div>
+            <div class="product-name">Running In</div>
+            <div class="product-desc">"When Everyone Runs Out." Firefighter helmet with crossed axes on a thin red line flag. A tribute to the bravest among us.</div>
+            <div class="product-footer">
+              <div class="product-price">$29.99 <span>+ shipping</span></div>
+              <button class="btn-add" onclick="openModal('Running In', 29.99, 'apparel-images/thin-red-line.png')">Select Size</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 9: Battle Buddy -->
+        <div class="product-card" data-category="humor">
+          <div class="product-img-wrap">
+            <img src="apparel-images/battle-buddy.png" alt="My Battle Buddy Made Me Do It Shirt" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <div class="product-category">Humor</div>
+            <div class="product-name">My Battle Buddy Made Me Do It</div>
+            <div class="product-desc">Classic military humor — two cartoon soldiers, one pointing and laughing. Because accountability only goes so far. Great for unit gifts.</div>
+            <div class="product-footer">
+              <div class="product-price">$29.99 <span>+ shipping</span></div>
+              <button class="btn-add" onclick="openModal('My Battle Buddy Made Me Do It', 29.99, 'apparel-images/battle-buddy.png')">Select Size</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 10: Armor of God -->
+        <div class="product-card" data-category="faith">
+          <div class="product-img-wrap">
+            <img src="apparel-images/warrior-faith.png" alt="Armor of God Shirt" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <div class="product-category">Faith-Based</div>
+            <div class="product-name">Armor of God</div>
+            <div class="product-desc">Soldier kneeling in prayer before a radiant cross. "Ephesians 6:11" — Put on the full armor of God. Gold and black dramatic design.</div>
+            <div class="product-footer">
+              <div class="product-price">$29.99 <span>+ shipping</span></div>
+              <button class="btn-add" onclick="openModal('Armor of God', 29.99, 'apparel-images/warrior-faith.png')">Select Size</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 11: Thin Gray Line -->
+        <div class="product-card" data-category="law-enforcement">
+          <div class="product-img-wrap">
+            <img src="apparel-images/corrections-officer.png" alt="Forgotten Heroes Corrections Officer Shirt" loading="lazy" />
+          </div>
+          <div class="product-info">
+            <div class="product-category">Law Enforcement</div>
+            <div class="product-name">Forgotten Heroes — Thin Gray Line</div>
+            <div class="product-desc">A tribute to corrections officers — the overlooked guardians of justice. Badge with crossed keys on a thin gray line flag.</div>
+            <div class="product-footer">
+              <div class="product-price">$29.99 <span>+ shipping</span></div>
+              <button class="btn-add" onclick="openModal('Forgotten Heroes — Thin Gray Line', 29.99, 'apparel-images/corrections-officer.png')">Select Size</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 12: Coffee is My Battle Buddy -->
+        <div class="product-card" data-category="humor">
+          <div class="product-img-wrap">
+            <img src="apparel-images/coffee-is-ops.png" alt="Coffee Is My Battle Buddy Shirt" loading="lazy" />
+            <span class="product-badge">New</span>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Humor</div>
+            <div class="product-name">Coffee Is My Battle Buddy</div>
+            <div class="product-desc">"Mission Critical." Tactical soldier armed with an oversized coffee mug. Because the mission doesn't start until the coffee's ready.</div>
+            <div class="product-footer">
+              <div class="product-price">$29.99 <span>+ shipping</span></div>
+              <button class="btn-add" onclick="openModal('Coffee Is My Battle Buddy', 29.99, 'apparel-images/coffee-is-ops.png')">Select Size</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NONPROFIT BULK ORDER SECTION -->
+  <section class="bos-nonprofit" id="nonprofit">
+    <div class="container">
+      <div class="nonprofit-grid">
+        <div class="nonprofit-content">
+          <div class="bos-hero-badge" style="margin-bottom:1.25rem">For Organizations</div>
+          <h2>Apparel &amp; <span>Promotional Goods</span> for Nonprofits</h2>
+          <p>Black Ops Style partners with nonprofits, veteran service organizations, and first responder associations to provide high-quality branded apparel for fundraisers, events, and awareness campaigns — at bulk pricing that makes sense for your budget.</p>
+          <p>We handle the design, printing, and fulfillment. You focus on your mission.</p>
+          <ul class="nonprofit-features">
+            <li>Bulk pricing starting at 12+ units — significant per-shirt savings</li>
+            <li>Custom event designs available — your logo, your message</li>
+            <li>Drop-ship direct to your event venue or members</li>
+            <li>All designs available in multiple colors and styles</li>
+            <li>Fundraiser-friendly pricing — sell at a markup to support your cause</li>
+            <li>Fast turnaround — typically 7–10 business days</li>
+          </ul>
+          <a href="#quote-form" class="btn btn-gold">Request a Bulk Quote</a>
+        </div>
+        <div class="quote-form" id="quote-form">
+          <h3>Request a <span style="color:#C9A84C">Bulk Quote</span></h3>
+          <form id="bulkQuoteForm" onsubmit="submitBulkQuote(event)">
+            <div class="form-group">
+              <label>Organization Name *</label>
+              <input type="text" name="org" required placeholder="Peacekeeper Initiative, VFW Post 1234, etc." />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Contact Name *</label>
+                <input type="text" name="contact" required placeholder="Your name" />
+              </div>
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" name="phone" placeholder="(727) 555-0000" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input type="email" name="email" required placeholder="you@organization.org" />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Estimated Quantity *</label>
+                <select name="qty" required>
+                  <option value="">Select range</option>
+                  <option value="12-24">12–24 shirts</option>
+                  <option value="25-49">25–49 shirts</option>
+                  <option value="50-99">50–99 shirts</option>
+                  <option value="100-249">100–249 shirts</option>
+                  <option value="250+">250+ shirts</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Needed By</label>
+                <input type="date" name="date" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Design Interest</label>
+              <select name="design">
+                <option value="">Select a design (or custom)</option>
+                <option>Patron Saint of Protectors</option>
+                <option>Back the Blue</option>
+                <option>PTSD Is Not a Weakness</option>
+                <option>Never Forgotten</option>
+                <option>First In. Last Out.</option>
+                <option>Faith Over Fear</option>
+                <option>Armor of God</option>
+                <option>Forgotten Heroes — Thin Gray Line</option>
+                <option>Running In</option>
+                <option>Custom Design (describe below)</option>
+                <option>Multiple Designs — see notes</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Additional Notes</label>
+              <textarea name="notes" placeholder="Event name, custom design ideas, special requirements, preferred colors..."></textarea>
+            </div>
+            <button type="submit" class="btn-confirm">Submit Quote Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIZE SELECTOR MODAL -->
+  <div class="modal-overlay" id="sizeModal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">×</button>
+      <h3 id="modalProductName">Product Name</h3>
+      <div class="modal-price" id="modalPrice">$29.99</div>
+      <label>Select Size</label>
+      <div class="size-grid">
+        <button class="size-btn" onclick="selectSize(this)">S</button>
+        <button class="size-btn" onclick="selectSize(this)">M</button>
+        <button class="size-btn" onclick="selectSize(this)">L</button>
+        <button class="size-btn" onclick="selectSize(this)">XL</button>
+        <button class="size-btn" onclick="selectSize(this)">2XL</button>
+        <button class="size-btn" onclick="selectSize(this)">3XL</button>
+      </div>
+      <label>Quantity</label>
+      <div class="qty-row">
+        <button class="qty-btn" onclick="changeQty(-1)">−</button>
+        <div class="qty-display" id="qtyDisplay">1</div>
+        <button class="qty-btn" onclick="changeQty(1)">+</button>
+      </div>
+      <button class="btn-confirm" onclick="addToCart()">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- CART DRAWER -->
+  <button class="cart-fab" id="cartFab" onclick="toggleCart()">
+    🛒
+    <span class="cart-count" id="cartCount">0</span>
+  </button>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close" onclick="toggleCart()">×</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty">Your cart is empty.<br/>Add some gear above!</div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span class="cart-total-price" id="cartTotalPrice">$0.00</span>
+      </div>
+      <button class="btn-checkout" onclick="proceedToCheckout()">Proceed to Checkout</button>
+      <div class="cart-note">Secure checkout · Ships within 7–10 business days</div>
+    </div>
+  </div>
+
+  <!-- CHECKOUT SECTION -->
+  <section class="checkout-section" id="checkoutSection">
+    <div class="container">
+      <div class="checkout-form">
+        <h2>Complete Your <span style="color:#C9A84C">Order</span></h2>
+        <div class="checkout-order-summary" id="checkoutSummary">
+          <h4>Order Summary</h4>
+        </div>
+        <div class="payment-note">
+          <strong>How it works:</strong> Submit your order below and we'll send you a payment link via email within 1 business day. Once payment is confirmed, your order goes to print and ships within 7–10 business days via USPS or UPS.
+        </div>
+        <form id="checkoutForm" onsubmit="submitOrder(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name *</label>
+              <input type="text" name="firstName" required />
+            </div>
+            <div class="form-group">
+              <label>Last Name *</label>
+              <input type="text" name="lastName" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" name="phone" />
+          </div>
+          <div class="form-group">
+            <label>Shipping Address *</label>
+            <input type="text" name="address" required placeholder="Street address" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>City *</label>
+              <input type="text" name="city" required />
+            </div>
+            <div class="form-group">
+              <label>State *</label>
+              <input type="text" name="state" required placeholder="FL" maxlength="2" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>ZIP Code *</label>
+            <input type="text" name="zip" required maxlength="10" />
+          </div>
+          <div class="form-group">
+            <label>Special Instructions</label>
+            <textarea name="notes" placeholder="Gift message, special requests..."></textarea>
+          </div>
+          <button type="submit" class="btn-confirm">Place Order — We'll Send Payment Link</button>
+        </form>
+      </div>
+      <div class="order-success" id="orderSuccess">
+        <div class="success-icon">✅</div>
+        <h2>Order Received!</h2>
+        <p>Thank you for your order. We'll email you a payment link within 1 business day. Once payment is confirmed, your gear ships in 7–10 business days.</p>
+        <p style="color:#C9A84C;font-family:'Oswald',sans-serif;font-size:0.9rem;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:2rem">Questions? Email rich@alvarezassociatesfl.com</p>
+        <a href="apparel.html" class="btn btn-gold">Continue Shopping</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#0a0f1a;border-top:1px solid rgba(201,168,76,0.15);padding:3rem 0;text-align:center;">
+    <div class="container">
+      <p style="font-family:'Oswald',sans-serif;font-size:1.1rem;color:#C9A84C;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem">Black Ops Style</p>
+      <p style="color:#8A9BB0;font-size:0.85rem;margin-bottom:1rem">A division of Alvarez &amp; Associates LLC · Tarpon Springs, FL</p>
+      <p style="color:#8A9BB0;font-size:0.8rem">
+        <a href="index.html" style="color:#C9A84C">← Back to Alvarez &amp; Associates</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="mailto:rich@alvarezassociatesfl.com" style="color:#8A9BB0">rich@alvarezassociatesfl.com</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <span>(727) 477-8909</span>
+      </p>
+      <p style="color:#4A5568;font-size:0.75rem;margin-top:1.5rem">© 2026 Alvarez &amp; Associates LLC. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"><strong id="toastTitle"></strong><span id="toastMsg"></span></div>
+
+  <script src="script.js"></script>
+  <script>
+    // ===========================
+    // BLACK OPS STYLE — STORE JS
+    // ===========================
+
+    let cart = [];
+    let currentProduct = null;
+    let currentQty = 1;
+    let selectedSize = null;
+
+    // Category filter
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.product-card').forEach(card => {
+          card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+        });
+      });
+    });
+
+    // Modal
+    function openModal(name, price, img) {
+      currentProduct = { name, price, img };
+      currentQty = 1;
+      selectedSize = null;
+      document.getElementById('modalProductName').textContent = name;
+      document.getElementById('modalPrice').textContent = '$' + price.toFixed(2);
+      document.getElementById('qtyDisplay').textContent = 1;
+      document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('selected'));
+      document.getElementById('sizeModal').classList.add('open');
+    }
+    function closeModal() {
+      document.getElementById('sizeModal').classList.remove('open');
+    }
+    function selectSize(btn) {
+      document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      selectedSize = btn.textContent;
+    }
+    function changeQty(delta) {
+      currentQty = Math.max(1, currentQty + delta);
+      document.getElementById('qtyDisplay').textContent = currentQty;
+    }
+    function addToCart() {
+      if (!selectedSize) { showToast('Size Required', 'Please select a size.'); return; }
+      cart.push({ ...currentProduct, size: selectedSize, qty: currentQty, id: Date.now() });
+      closeModal();
+      renderCart();
+      showToast('Added to Cart!', currentProduct.name + ' (' + selectedSize + ') × ' + currentQty);
+    }
+
+    // Cart
+    function toggleCart() {
+      document.getElementById('cartDrawer').classList.toggle('open');
+    }
+    function renderCart() {
+      const el = document.getElementById('cartItems');
+      const countEl = document.getElementById('cartCount');
+      const totalEl = document.getElementById('cartTotalPrice');
+      if (cart.length === 0) {
+        el.innerHTML = '<div class="cart-empty">Your cart is empty.<br/>Add some gear above!</div>';
+        countEl.style.display = 'none';
+        totalEl.textContent = '$0.00';
+        return;
+      }
+      let total = 0;
+      let html = '';
+      cart.forEach(item => {
+        total += item.price * item.qty;
+        html += `<div class="cart-item">
+          <img src="${item.img}" alt="${item.name}" />
+          <div class="cart-item-info">
+            <div class="cart-item-name">${item.name}</div>
+            <div class="cart-item-meta">Size: ${item.size} · Qty: ${item.qty}</div>
+            <div class="cart-item-price">$${(item.price * item.qty).toFixed(2)}</div>
+          </div>
+          <button class="cart-item-remove" onclick="removeFromCart(${item.id})">✕</button>
+        </div>`;
+      });
+      el.innerHTML = html;
+      const totalCount = cart.reduce((s, i) => s + i.qty, 0);
+      countEl.textContent = totalCount;
+      countEl.style.display = 'flex';
+      totalEl.textContent = '$' + total.toFixed(2);
+    }
+    function removeFromCart(id) {
+      cart = cart.filter(i => i.id !== id);
+      renderCart();
+    }
+
+    // Checkout
+    function proceedToCheckout() {
+      if (cart.length === 0) { showToast('Cart Empty', 'Add items to your cart first.'); return; }
+      document.getElementById('cartDrawer').classList.remove('open');
+      const section = document.getElementById('checkoutSection');
+      section.classList.add('visible');
+      // Build summary
+      let html = '<h4>Order Summary</h4>';
+      let total = 0;
+      cart.forEach(item => {
+        total += item.price * item.qty;
+        html += `<div class="summary-item"><span>${item.name} (${item.size}) ×${item.qty}</span><span>$${(item.price * item.qty).toFixed(2)}</span></div>`;
+      });
+      html += `<div class="summary-item summary-total"><span>Subtotal</span><span>$${total.toFixed(2)}</span></div>`;
+      html += `<div class="summary-item" style="color:#8A9BB0;font-size:0.8rem"><span>Shipping</span><span>Calculated at payment</span></div>`;
+      document.getElementById('checkoutSummary').innerHTML = html;
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function submitOrder(e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = new FormData(form);
+      // Build email body
+      let orderLines = cart.map(i => `${i.name} (${i.size}) x${i.qty} = $${(i.price*i.qty).toFixed(2)}`).join('\n');
+      let total = cart.reduce((s,i) => s + i.price*i.qty, 0);
+      const subject = encodeURIComponent('New Black Ops Style Order — ' + data.get('firstName') + ' ' + data.get('lastName'));
+      const body = encodeURIComponent(
+        `NEW ORDER FROM BLACK OPS STYLE\n\n` +
+        `Customer: ${data.get('firstName')} ${data.get('lastName')}\n` +
+        `Email: ${data.get('email')}\n` +
+        `Phone: ${data.get('phone') || 'N/A'}\n` +
+        `Address: ${data.get('address')}, ${data.get('city')}, ${data.get('state')} ${data.get('zip')}\n\n` +
+        `ORDER:\n${orderLines}\n\nSubtotal: $${total.toFixed(2)}\n\n` +
+        `Notes: ${data.get('notes') || 'None'}`
+      );
+      window.location.href = `mailto:rich@alvarezassociatesfl.com?subject=${subject}&body=${body}`;
+      document.getElementById('checkoutSection').querySelector('.checkout-form').style.display = 'none';
+      document.getElementById('orderSuccess').classList.add('visible');
+      cart = [];
+      renderCart();
+    }
+
+    function submitBulkQuote(e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = new FormData(form);
+      const subject = encodeURIComponent('Bulk Order Quote Request — ' + data.get('org'));
+      const body = encodeURIComponent(
+        `BULK QUOTE REQUEST — BLACK OPS STYLE\n\n` +
+        `Organization: ${data.get('org')}\n` +
+        `Contact: ${data.get('contact')}\n` +
+        `Email: ${data.get('email')}\n` +
+        `Phone: ${data.get('phone') || 'N/A'}\n` +
+        `Quantity: ${data.get('qty')}\n` +
+        `Needed By: ${data.get('date') || 'Flexible'}\n` +
+        `Design Interest: ${data.get('design') || 'N/A'}\n` +
+        `Notes: ${data.get('notes') || 'None'}`
+      );
+      window.location.href = `mailto:rich@alvarezassociatesfl.com?subject=${subject}&body=${body}`;
+      showToast('Quote Submitted!', 'We\'ll be in touch within 1 business day.');
+      form.reset();
+    }
+
+    // Toast
+    function showToast(title, msg) {
+      const t = document.getElementById('toast');
+      document.getElementById('toastTitle').textContent = title;
+      document.getElementById('toastMsg').textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 3500);
+    }
+
+    // Close modal on overlay click
+    document.getElementById('sizeModal').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+    });
+  </script>
+</body>
+</html>
