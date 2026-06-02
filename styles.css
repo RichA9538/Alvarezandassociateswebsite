@@ -164,6 +164,10 @@ a { color: inherit; text-decoration: none; }
   font-weight: 600 !important;
   white-space: nowrap;
   font-size: 0.78rem !important;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  vertical-align: middle;
 }
 .nav-cta:hover { opacity: 0.9; transform: translateY(-1px); }
 .nav-toggle {
