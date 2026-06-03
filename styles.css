@@ -142,9 +142,6 @@ a { color: inherit; text-decoration: none; }
   flex-wrap: nowrap;
   flex-shrink: 0;
 }
-.nav-links li {
-  vertical-align: middle;
-}
 .nav-links a {
   font-size: 0.8rem;
   font-weight: 500;
@@ -566,31 +563,6 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ===========================
-   GAINWORK SECTION
-   =========================== */
-.gainwork-section {
-  background: linear-gradient(135deg, #0F1B2D 0%, #1A2B42 60%, #0F1B2D 100%);
-  border-top: 1px solid rgba(201,168,76,0.2);
-  border-bottom: 1px solid rgba(201,168,76,0.2);
-  position: relative;
-  overflow: hidden;
-}
-.gainwork-section::before {
-  content: '';
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  width: 600px; height: 300px;
-  background: radial-gradient(ellipse, rgba(201,168,76,0.06) 0%, transparent 70%);
-  pointer-events: none;
-}
-.gainwork-inner .rydeworks-features .rw-feature {
-  background: rgba(201,168,76,0.08);
-  border: 1px solid rgba(201,168,76,0.25);
-  color: rgba(255,255,255,0.85);
-}
-
-/* ===========================
    CONTACT
    =========================== */
 .contact {
@@ -805,4 +777,43 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 480px) {
   .intro-grid { grid-template-columns: 1fr 1fr; }
   .about-credentials { grid-template-columns: 1fr; }
+}
+
+/* ===========================
+   GAINWORK SECTION
+   =========================== */
+.gainwork-section {
+  background: linear-gradient(135deg, #0F1B2D 0%, #1A2B42 60%, #0F1B2D 100%);
+  border-top: 1px solid rgba(201,168,76,0.2);
+  border-bottom: 1px solid rgba(201,168,76,0.2);
+  position: relative;
+  overflow: hidden;
+}
+.gainwork-section::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px; height: 300px;
+  background: radial-gradient(ellipse, rgba(201,168,76,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.gainwork-inner .rydeworks-features .rw-feature {
+  background: rgba(201,168,76,0.08);
+  border: 1px solid rgba(201,168,76,0.25);
+  color: rgba(255,255,255,0.85);
+}
+.gainwork-logo-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+.gainwork-logo-card img {
+  height: 140px;
+  width: auto;
+  display: block;
 }
