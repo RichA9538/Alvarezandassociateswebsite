@@ -143,8 +143,7 @@ a { color: inherit; text-decoration: none; }
   flex-shrink: 0;
 }
 .nav-links li {
-  display: flex;
-  align-items: center;
+  vertical-align: middle;
 }
 .nav-links a {
   font-size: 0.8rem;
