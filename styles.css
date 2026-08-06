@@ -774,7 +774,9 @@ a { color: inherit; text-decoration: none; }
     z-index: 999;
   }
   .nav-links.open { display: flex; }
-  .nav-links a { font-size: 1.25rem; }
+  .nav-links a { font-size: 1.25rem; color: var(--white); font-weight: 600; letter-spacing: 0.05em; }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-links .nav-cta { color: var(--navy) !important; }
   .nav-toggle { display: flex; z-index: 1000; flex-shrink: 0; }
   .contact-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
